@@ -19,3 +19,13 @@ class Validations:
             return (re.match(re.compile(Patterns.NAME_PATTERN), name))
         except Exception as e:
             Log.logger.error(e)
+
+    def lastNameValidation(name):
+        """
+        Description:
+            this function validate name
+        """
+        try:
+            return (re.match(re.compile(Patterns.NAME_PATTERN), name))
+        except Exception as e:
+            Log.logger.error(e)
