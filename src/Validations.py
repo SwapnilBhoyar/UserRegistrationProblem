@@ -56,6 +56,6 @@ class Validations:
             this function validate passwords
         """
         try:
-            return (re.match(re.compile(Patterns.PASSWORDRULE1), password))
+            return (re.match(re.compile(Patterns.PASSWORD), password))
         except Exception as e:
             Log.logger.error(e)

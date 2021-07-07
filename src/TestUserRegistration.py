@@ -82,7 +82,7 @@ class TestUserRegistration(unittest.TestCase):
         Description:
             this function validate password
         """
-        self.assertTrue(Validations.passwordValidation("swapnilb"))
+        self.assertTrue(Validations.passwordValidation("Swapnilb"))
         
 
     def test_givenInvalidPassword_shouldReturnFalse(self):
