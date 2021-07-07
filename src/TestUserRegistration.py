@@ -82,7 +82,7 @@ class TestUserRegistration(unittest.TestCase):
         Description:
             this function validate password
         """
-        self.assertTrue(Validations.passwordValidation("Swapnilb"))
+        self.assertTrue(Validations.passwordValidation("Swapnilb123"))
         
 
     def test_givenInvalidPassword_shouldReturnFalse(self):
@@ -90,7 +90,7 @@ class TestUserRegistration(unittest.TestCase):
         Description:
             this function validate invalid mobile number
         """
-        self.assertFalse(Validations.passwordValidation("Swapnil"))
+        self.assertFalse(Validations.passwordValidation("Swapn@"))
         self.assertFalse(Validations.passwordValidation("@swapnil"))
         self.assertFalse(Validations.passwordValidation("abc"))
 
