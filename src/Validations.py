@@ -40,3 +40,12 @@ class Validations:
         except Exception as e:
             Log.logger.error(e)
 
+    def phoneValidation(phone):
+        """
+        Description:
+            this function validate mobile number
+        """
+        try:
+            return (re.match(re.compile(Patterns.PHONE_PATTERN), phone))
+        except Exception as e:
+            Log.logger.error(e)

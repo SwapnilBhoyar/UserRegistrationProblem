@@ -44,13 +44,14 @@ class TestUserRegistration(unittest.TestCase):
         self.assertFalse(Validations.lastNameValidation("bhoy@r"))
 
     def test_givenValidMail_shouldReturnTrue(self):
-        self.assertTrue(Validations.mailValidation("abc.xyz@bl.co.in"))
         """
         Description:
             this function validate mail
         """
+        self.assertTrue(Validations.mailValidation("abc.xyz@bl.co.in"))
+        
 
-    def test_givenInvalidLastName_shouldReturnFalse(self):
+    def test_givenInvalidMail_shouldReturnFalse(self):
         """
         Description:
             this function validate invalid mail
@@ -58,6 +59,23 @@ class TestUserRegistration(unittest.TestCase):
         self.assertFalse(Validations.mailValidation("abc.xyzbl.co.in"))
         self.assertFalse(Validations.mailValidation("abc.xyz@.co.in"))
         self.assertFalse(Validations.mailValidation("ab.cxyz@bl.co.in"))
+        
+    def test_givenValidPhoneNumber_shouldReturnTrue(self):
+        """
+        Description:
+            this function validate mobile number
+        """
+        self.assertTrue(Validations.phoneValidation("91 2314569870"))
+        
+
+    def test_givenInvalidPhoneNumber_shouldReturnFalse(self):
+        """
+        Description:
+            this function validate invalid mobile number
+        """
+        self.assertFalse(Validations.phoneValidation("9 1236547890"))
+        self.assertFalse(Validations.phoneValidation("7896541230236"))
+        self.assertFalse(Validations.phoneValidation("91 897456@231"))
 
 if __name__=="__main__":
     unittest.main()
