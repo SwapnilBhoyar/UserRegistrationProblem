@@ -77,5 +77,23 @@ class TestUserRegistration(unittest.TestCase):
         self.assertFalse(Validations.phoneValidation("7896541230236"))
         self.assertFalse(Validations.phoneValidation("91 897456@231"))
 
+    def test_givenValidPassword_shouldReturnTrue(self):
+        """
+        Description:
+            this function validate password
+        """
+        self.assertTrue(Validations.passwordValidation("swapnilb"))
+        
+
+    def test_givenInvalidPassword_shouldReturnFalse(self):
+        """
+        Description:
+            this function validate invalid mobile number
+        """
+        self.assertFalse(Validations.passwordValidation("Swapnil"))
+        self.assertFalse(Validations.passwordValidation("@swapnil"))
+        self.assertFalse(Validations.passwordValidation("abc"))
+
+
 if __name__=="__main__":
     unittest.main()
