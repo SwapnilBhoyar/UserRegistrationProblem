@@ -29,3 +29,14 @@ class Validations:
             return (re.match(re.compile(Patterns.NAME_PATTERN), name))
         except Exception as e:
             Log.logger.error(e)
+
+    def mailValidation(mail):
+        """
+        Description:
+            this function validate mail
+        """
+        try:
+            return (re.match(re.compile(Patterns.MAIL_PATTERN), mail))
+        except Exception as e:
+            Log.logger.error(e)
+

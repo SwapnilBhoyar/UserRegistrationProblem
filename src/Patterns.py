@@ -7,3 +7,4 @@
 """
 class Patterns:
     NAME_PATTERN = r"^[A-Z]{1}[a-zA-Z]{2,}$"
+    MAIL_PATTERN = "^[a-zA-Z0-9]{3,}([\\.\\+\\-]?[a-zA-Z0-9]{3,})?[@][A-Za-z0-9]{1,}[.][A-Za-z]{2,4}[,]?([.][A-Za-z]{2,4}[.]?)?$"
