@@ -1,8 +1,8 @@
 """
 @Author: Swapnil Bhoyar
-@Date: 2021-07-05 18:42:00
+@Date: 2021-07-08 09:35:00
 @Last Modified by: Swapnil Bhoyar
-@Last Modified time: 2021-07-05 18:42:00
+@Last Modified time: 2021-08-05 09:35:00
 @Title : test for User registration program.
 """
 
@@ -94,6 +94,20 @@ class TestUserRegistration(unittest.TestCase):
         self.assertFalse(Validations.passwordValidation("@swapnil"))
         self.assertFalse(Validations.passwordValidation("abc"))
 
+    
+    def test_givenValidMultipleMails_shouldReturnTrue(self):
+        """
+        Description:
+            this function validate multiple mails
+        """
+        self.assertTrue(Validations.multipleMailValidation(Validations.validMailIds))
+
+    def test_givenInvalidMultipleMails_shouldReturnFalse(self):
+        """
+        Description:
+            this function validate multiple invalid mails 
+        """
+        self.assertFalse(Validations.multipleMailValidation(Validations.invalidMmailIds))
 
 if __name__=="__main__":
     unittest.main()

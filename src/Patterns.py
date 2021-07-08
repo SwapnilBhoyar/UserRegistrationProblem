@@ -1,8 +1,8 @@
 """
 @Author: Swapnil Bhoyar
-@Date: 2021-07-05 18:42:00
+@Date: 2021-07-08 09:35:00
 @Last Modified by: Swapnil Bhoyar
-@Last Modified time: 2021-07-05 18:42:00
+@Last Modified time: 2021-07-08 09:35:00
 @Title : pattern for validation.
 """
 class Patterns:
