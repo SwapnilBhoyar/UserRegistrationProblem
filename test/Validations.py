@@ -87,10 +87,21 @@ class Validations:
     def validPasswordValidation(password):
         """
         Description:
+            this function validate password
+        """
+        try:
+            return (re.match(re.compile(Patterns.PASSWORD), password))
+        except Exception as e:
+            Log.logger.error(e)
+
+    def passwordValidation(passwords):
+        """
+        Description:
             this function validate passwords
         """
         try:
-            return re.match(re.compile(Patterns.PASSWORD), password)
+            for password in passwords:
+                return (re.match(re.compile(Patterns.PASSWORD), password))
         except Exception as e:
             Log.logger.error(e)
 
